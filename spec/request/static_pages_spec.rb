@@ -14,4 +14,10 @@ RSpec.describe "StaticPages", :type => :request do
       page.should have_content('StaticPages#help')
     end
   end
+  describe "GET /static_pages" do
+    it "should have the content 'StaticPages#about'" do
+      visit '/static_pages/about'
+      page.should have_content('StaticPages#about')
+    end
+  end
 end
